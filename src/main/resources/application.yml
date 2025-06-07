@@ -22,7 +22,7 @@ spring:
 
   kafka:
     consumer:
-      bootstrapServers: kafka:9092
+      bootstrap-servers: kafka:9092
       request:
         topic: request-events
         group: sto-group

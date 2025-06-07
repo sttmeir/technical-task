@@ -18,8 +18,8 @@ public class KafkaRequestEventListener {
     private final RequestService requestService;
 
     @KafkaListener(
-            topics = "${kafka.consumer.request.topic}",
-            groupId = "${kafka.consumer.request.group}",
+            topics = "${spring.kafka.consumer.request.topic}",
+            groupId = "${spring.kafka.consumer.request.group}",
             containerFactory = "kafkaListenerContainerFactory"
     )
     public void handleKafkaEvent(KafkaRequestEvent event) {

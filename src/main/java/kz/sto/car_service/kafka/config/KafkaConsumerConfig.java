@@ -18,11 +18,11 @@ import java.util.Map;
 @EnableKafka
 @Configuration
 public class KafkaConsumerConfig {
-    @Value(value = "${kafka.consumer.bootstrapServers}")
-    private String bootstrapAddress;
+    @Value(value = "${spring.kafka.consumer.bootstrap-servers}")
+    String bootstrapAddress;
 
-    @Value("${kafka.consumer.request.group}")
-    private String groupId;
+    @Value("${spring.kafka.consumer.request.group}")
+    String groupId;
 
     @Bean
     public ConsumerFactory<String, KafkaRequestEvent> consumerFactory() {

@@ -39,6 +39,10 @@ public class RequestService {
         return requestRepo.findByStatus(status);
     }
 
+    public List<Request> getAllRequests() {
+        return requestRepo.findAll();
+    }
+
     @Transactional
     public void changeStatus(Long requestId, RequestStatus newStatus, String changedBy, String reason) {
         Request request = requestRepo.findById(requestId).orElseThrow();
