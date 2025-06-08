@@ -18,7 +18,7 @@ Swagger-документация: http://localhost:8080/swagger-ui/index.html#/
 
 ### 4. Тест приложения
 #### 1. Создание клиента: http://localhost:8080/swagger-ui/index.html#/%D0%9A%D0%BB%D0%B8%D0%B5%D0%BD%D1%82%D1%8B/create
-#### 2. Чтобы создать заявку нужно создать кафка события на создание заявки. Для этого на командной строке запускаем продюсер.
+#### 2. Чтобы создать заявку нужно создать кафка события на создание заявки. Для этого на командной строке запускаем продюсер
 ```bash
 docker exec -it kafka kafka-console-producer --broker-list localhost:9092 --topic request-events
 ```
