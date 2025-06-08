@@ -21,11 +21,23 @@ spring:
     open-in-view: false
 
   kafka:
+    bootstrap-servers: kafka:9092
+
     consumer:
-      bootstrap-servers: kafka:9092
       request:
         topic: request-events
         group: sto-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: "*"
+
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      client-id: sto-service-producer-1
+
     listener:
       missing-topics-fatal: false
 

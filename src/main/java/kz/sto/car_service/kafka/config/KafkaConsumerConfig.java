@@ -18,8 +18,8 @@ import java.util.Map;
 @EnableKafka
 @Configuration
 public class KafkaConsumerConfig {
-    @Value(value = "${spring.kafka.consumer.bootstrap-servers}")
-    String bootstrapAddress;
+    @Value(value = "${spring.kafka.bootstrap-servers}")
+    String bootstrapServers;
 
     @Value("${spring.kafka.consumer.request.group}")
     String groupId;
@@ -27,7 +27,7 @@ public class KafkaConsumerConfig {
     @Bean
     public ConsumerFactory<String, KafkaRequestEvent> consumerFactory() {
         Map<String, Object> config = new HashMap<>();
-        config.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapAddress);
+        config.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
         config.put(ConsumerConfig.GROUP_ID_CONFIG, groupId);
         config.put(JsonDeserializer.TRUSTED_PACKAGES, "*");
         return new DefaultKafkaConsumerFactory<>(

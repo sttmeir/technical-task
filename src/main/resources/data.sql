@@ -1,1 +1,0 @@
-INSERT INTO clients (name, phone_number) VALUES ('Мейржан СТО', '12345678910');
