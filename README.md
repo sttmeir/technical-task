@@ -13,6 +13,7 @@ docker-compose up
 
 ### 3. Доступ к приложению
 Основной сервис: http://localhost:8080
+
 Swagger-документация: http://localhost:8080/swagger-ui/index.html#/
 
 ### 4. Тест приложения
