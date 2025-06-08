@@ -25,9 +25,9 @@ docker exec -it kafka kafka-console-producer --broker-list localhost:9092 --topi
 
 В командную строку по очереди кладем кафка события:
 1. {"requestEventType":"CREATE","requestCreateMsg": {"clientId":"1","description":"description"}}
-2. {"requestEventType":"UPDATE","requestStatusChangeMsg": {"requestId":"1","newStatus":"IN_PROGRESS","changedBy":"Auto Механик","reason":"Взял на ремонт ьыстро"}}
-3. {"requestEventType":"UPDATE","requestStatusChangeMsg": {"requestId":"1","newStatus":"REPAIRING","changedBy":"Слесарь","reason":"Уже на половине ремаонта"}}
-4. {"requestEventType":"UPDATE","requestStatusChangeMsg": {"requestId":"1","newStatus":"DONE","changedBy":"Менеджер","reason":"Все сделаи крависо"}}
+2. {"requestEventType":"UPDATE","requestStatusChangeMsg": {"requestId":"1","newStatus":"IN_PROGRESS","changedBy":"Автомеханик","reason":"Взял на ремонт"}}
+3. {"requestEventType":"UPDATE","requestStatusChangeMsg": {"requestId":"1","newStatus":"REPAIRING","changedBy":"Слесарь","reason":"Уже на половине ремонта"}}
+4. {"requestEventType":"UPDATE","requestStatusChangeMsg": {"requestId":"1","newStatus":"DONE","changedBy":"Менеджер","reason":"Все сделали красиво"}}
 
 Структура выглядит следующим образом:
 
