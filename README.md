@@ -24,10 +24,10 @@ docker exec -it kafka kafka-console-producer --broker-list localhost:9092 --topi
 ```
 
 В командную строку по очереди кладем кафка события:
-{"requestEventType":"CREATE","requestCreateMsg": {"clientId":"1","description":"description"}}
-{"requestEventType":"UPDATE","requestStatusChangeMsg": {"requestId":"1","newStatus":"IN_PROGRESS","changedBy":"Auto Механик","reason":"Взял на ремонт ьыстро"}}
-{"requestEventType":"UPDATE","requestStatusChangeMsg": {"requestId":"1","newStatus":"REPAIRING","changedBy":"Слесарь","reason":"Уже на половине ремаонта"}}
-{"requestEventType":"UPDATE","requestStatusChangeMsg": {"requestId":"1","newStatus":"DONE","changedBy":"Менеджер","reason":"Все сделаи крависо"}}
+1. {"requestEventType":"CREATE","requestCreateMsg": {"clientId":"1","description":"description"}}
+2. {"requestEventType":"UPDATE","requestStatusChangeMsg": {"requestId":"1","newStatus":"IN_PROGRESS","changedBy":"Auto Механик","reason":"Взял на ремонт ьыстро"}}
+3. {"requestEventType":"UPDATE","requestStatusChangeMsg": {"requestId":"1","newStatus":"REPAIRING","changedBy":"Слесарь","reason":"Уже на половине ремаонта"}}
+4. {"requestEventType":"UPDATE","requestStatusChangeMsg": {"requestId":"1","newStatus":"DONE","changedBy":"Менеджер","reason":"Все сделаи крависо"}}
 
 Структура выглядит следующим образом:
 ![img.png](img.png)
