@@ -29,7 +29,8 @@ docker exec -it kafka kafka-console-producer --broker-list localhost:9092 --topi
 3. Обновление статуса заявки на REPAIRING: {"requestEventType":"UPDATE","requestStatusChangeMsg": {"requestId":"1","newStatus":"REPAIRING","changedBy":"Слесарь","reason":"Уже на половине ремонта"}}
 4. Обновление статуса заявки на DONE: {"requestEventType":"UPDATE","requestStatusChangeMsg": {"requestId":"1","newStatus":"DONE","changedBy":"Менеджер","reason":"Все сделали красиво"}}
 
-Надо копировать начиная с { до } включительно. Например: {"requestEventType":"CREATE","requestCreateMsg": {"clientId":"1","description":"description"}}
+Надо копировать начиная с { до } включительно. Например: 
+{"requestEventType":"CREATE","requestCreateMsg": {"clientId":"1","description":"description"}}
 
 Структуры JSON'ов выглядят следующим образом:
 
