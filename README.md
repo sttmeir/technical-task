@@ -30,6 +30,7 @@ docker exec -it kafka kafka-console-producer --broker-list localhost:9092 --topi
 4. {"requestEventType":"UPDATE","requestStatusChangeMsg": {"requestId":"1","newStatus":"DONE","changedBy":"Менеджер","reason":"Все сделаи крависо"}}
 
 Структура выглядит следующим образом:
+
 ![img.png](img.png)
 
 #### 3. Проверяем созданные заявки: http://localhost:8080/swagger-ui/index.html#/%D0%97%D0%B0%D1%8F%D0%B2%D0%BA%D0%B8/getAllRequests
@@ -37,7 +38,7 @@ docker exec -it kafka kafka-console-producer --broker-list localhost:9092 --topi
 #### 4. После каждого кафка события проверяем логи:
 ![img_1.png](img_1.png)
 
-### 5. 5. Остановка контейнеров
+### 5. Остановка контейнеров
 ```bash
 docker-compose down
 ```
