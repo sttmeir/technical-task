@@ -25,13 +25,13 @@ docker exec -it kafka kafka-console-producer --broker-list localhost:9092 --topi
 
 **В командную строку по очереди кладем кафка события**
 1. Создание заявки: 
-{"requestEventType":"CREATE","requestCreateMsg": {"clientId":"1","description":"description"}}
+* {"requestEventType":"CREATE","requestCreateMsg": {"clientId":"1","description":"description"}}
 2. Обновление статуса заявки на IN_PROGRESS: 
-{"requestEventType":"UPDATE","requestStatusChangeMsg": {"requestId":"1","newStatus":"IN_PROGRESS","changedBy":"Автомеханик","reason":"Взял на ремонт"}}
+* {"requestEventType":"UPDATE","requestStatusChangeMsg": {"requestId":"1","newStatus":"IN_PROGRESS","changedBy":"Автомеханик","reason":"Взял на ремонт"}}
 3. Обновление статуса заявки на REPAIRING: 
-{"requestEventType":"UPDATE","requestStatusChangeMsg": {"requestId":"1","newStatus":"REPAIRING","changedBy":"Слесарь","reason":"Уже на половине ремонта"}}
+* {"requestEventType":"UPDATE","requestStatusChangeMsg": {"requestId":"1","newStatus":"REPAIRING","changedBy":"Слесарь","reason":"Уже на половине ремонта"}}
 4. Обновление статуса заявки на DONE: 
-{"requestEventType":"UPDATE","requestStatusChangeMsg": {"requestId":"1","newStatus":"DONE","changedBy":"Менеджер","reason":"Все сделали красиво"}}
+* {"requestEventType":"UPDATE","requestStatusChangeMsg": {"requestId":"1","newStatus":"DONE","changedBy":"Менеджер","reason":"Все сделали красиво"}}
 
 **Надо копировать начиная с { до } включительно. Например:** 
 * {"requestEventType":"CREATE","requestCreateMsg": {"clientId":"1","description":"description"}}
