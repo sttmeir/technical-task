@@ -22,11 +22,6 @@ public class RequestController {
 
     private final RequestService requestService;
 
-    @PostMapping("/create")
-    public void create(@RequestParam Long clientId, @RequestParam String description) {
-        requestService.createRequest(clientId, description);
-    }
-
     @GetMapping("/client/{clientId}")
     public List<Request> getRequestsByClient(@PathVariable Long clientId) {
         return requestService.getByClient(clientId);
