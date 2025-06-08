@@ -3,7 +3,7 @@
 ### 1. Клонируем репозиторий
 
 ```bash
-https://github.com/sttmeir/technical-task.git
+git clone https://github.com/sttmeir/technical-task.git
 cd technical-task
 ```
 ### 2. Запускаем контейнеры через Docker Compose
